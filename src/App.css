@@ -1,0 +1,43 @@
+@keyframes float-slow {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(24px);
+  }
+}
+
+@keyframes float-slow-reverse {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 20s ease-in-out infinite alternate;
+}
+
+.animate-float-slow-reverse {
+  animation: float-slow-reverse 22s ease-in-out infinite alternate;
+}
+
+.background-pattern {
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.15) 0%, transparent 28%),
+    radial-gradient(circle at 75% 10%, rgba(56, 189, 248, 0.10) 0%, transparent 26%),
+    radial-gradient(circle at 82% 75%, rgba(56, 189, 248, 0.14) 0%, transparent 20%),
+    radial-gradient(circle at 25% 80%, rgba(56, 189, 248, 0.08) 0%, transparent 22%),
+    repeating-linear-gradient(135deg, rgba(56, 189, 248, 0.08) 0 1px, transparent 1px 14px);
+  background-size: cover;
+}
+
+.background-pattern::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.18) 28%, transparent 100%);
+  opacity: 0.65;
+}
