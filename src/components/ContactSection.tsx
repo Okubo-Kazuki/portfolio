@@ -1,4 +1,5 @@
 import { SectionHeading } from './SectionHeading'
+import ActionButton from './ActionButton'
 
 export default function ContactSection() {
   return (
@@ -13,12 +14,8 @@ export default function ContactSection() {
           </p>
         </div>
         <div className="flex flex-col gap-3">
-          <a href="mailto:hello@example.com" className="rounded-2xl border-2 border-slate-900 bg-sky-500 px-8 py-3 font-bold text-white transition hover:bg-sky-600">
-            メールを送る
-          </a>
-          <a href="#" className="rounded-2xl border-2 border-slate-900 bg-white px-8 py-3 font-bold text-slate-900 transition hover:bg-slate-100">
-            GitHub
-          </a>
+          <ActionButton href="mailto:hello@example.com" variant="primary">メールを送る</ActionButton>
+          <ActionButton href="#">GitHub</ActionButton>
         </div>
       </div>
     </footer>

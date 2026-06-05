@@ -1,5 +1,4 @@
 import './App.css'
-import BackgroundPattern from './components/BackgroundPattern'
 import HeaderSection from './components/HeaderSection'
 import ProjectsSection from './components/ProjectsSection'
 import SkillsSection from './components/SkillsSection'
@@ -9,7 +8,6 @@ import ContactSection from './components/ContactSection'
 function App() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-white text-slate-900">
-      <BackgroundPattern />
       <div className="mx-auto max-w-6xl">
         <HeaderSection />
         <ProjectsSection />

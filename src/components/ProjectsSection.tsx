@@ -1,4 +1,5 @@
 import { SectionHeading } from './SectionHeading'
+import ProjectCard from './ProjectCard'
 
 const projects = [
   {
@@ -26,13 +27,7 @@ export default function ProjectsSection() {
       </div>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
-          <article key={project.title} className={`rounded-3xl border-2 border-slate-900 p-8 transition ${project.style}`}>
-            <h3 className="text-lg font-black">{project.title}</h3>
-            <div className="mb-4 mt-3 h-0.5 w-8 bg-sky-500" />
-            <p className={project.style.includes('text-white') ? 'text-sm leading-7 text-slate-300' : 'text-sm leading-7 text-slate-700'}>
-              {project.description}
-            </p>
-          </article>
+          <ProjectCard key={project.title} title={project.title} description={project.description} style={project.style} />
         ))}
       </div>
     </section>
