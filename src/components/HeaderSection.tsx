@@ -1,4 +1,3 @@
-import Badge from './Badge';
 import StatCard from './StatCard';
 
 export default function HeaderSection() {
@@ -13,7 +12,7 @@ export default function HeaderSection() {
           <p className="mt-2 text-xl text-slate-700">Frontend Developer</p>
           <div className="mt-4 h-1 w-16 bg-sky-500" />
         </div>
-        <div className="grid gap-8 md:grid-cols-[minmax(240px,300px)_1fr] items-start">
+        <div className="grid gap-8 md:grid-cols-[minmax(240px,300px)_1fr] items-center">
           <div className="aspect-square w-full max-w-[300px] overflow-hidden rounded-3xl border-2 border-slate-900 bg-slate-200">
             <img
               src="/src/assets/img/face.png"
@@ -23,8 +22,9 @@ export default function HeaderSection() {
           </div>
           <div className="space-y-6">
             <p className="text-base leading-8 text-slate-700">
-              フロントエンド開発を中心に、Webサイト制作をしております。<br />
-              実務では、仕様変更に強いプログラムを書くことを心がけております。
+              フロントエンド開発を中心に、Webサイト制作をしています。<br />
+              実務では、仕様変更に強いプログラムを書くよう心がけています。<br />
+              インターンとして、小中学生にプログラミングを教える活動もしています。
             </p>
             
             <div className="grid gap-3 md:grid-cols-2">

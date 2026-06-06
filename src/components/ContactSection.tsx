@@ -10,7 +10,7 @@ export default function ContactSection() {
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
         <div className="space-y-4">
           <p className="text-sm text-slate-700">
-            いろいろなプラットフォームでつながりましょう！
+            様々なプラットフォームでつながりましょう！
           </p>
         </div>
         <div className="flex flex-col gap-3">
@@ -18,6 +18,7 @@ export default function ContactSection() {
             メールを送る
           </ActionButton>
           <ActionButton href="https://github.com/Okubo-Kazuki" target='_blank'>GitHub</ActionButton>
+          <ActionButton href="https://www.facebook.com/profile.php?id=61550066544674" target='_blank'>Facebook</ActionButton>
         </div>
       </div>
     </footer>
