@@ -1,4 +1,5 @@
 import StatCard from './StatCard';
+import faceImage from '../assets/img/face.png';
 
 export default function HeaderSection() {
   return (
@@ -15,7 +16,7 @@ export default function HeaderSection() {
         <div className="grid gap-8 md:grid-cols-[minmax(240px,300px)_1fr] items-center">
           <div className="aspect-square w-full max-w-[300px] overflow-hidden rounded-3xl border-2 border-slate-900 bg-slate-200 mx-auto lg:mx-0">
             <img
-              src="/src/assets/img/face.png"
+              src={faceImage}
               alt="プロフィール写真"
               className="h-full w-full object-cover"
             />

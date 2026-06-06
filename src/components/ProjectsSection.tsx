@@ -1,11 +1,14 @@
 import { SectionHeading } from './SectionHeading';
 import ProjectCard from './ProjectCard';
+import sabaemachinakaPreview from '../assets/img/sabaemachinaka.png';
+import astralPreview from '../assets/img/astral.png';
+import portfolioPreview from '../assets/img/portfolio.png';
 
 const projects = [
   {
     title: '鯖江まちなか移住&定住情報サイト',
     subtitle: '移住・定住者向け情報サイト',
-    preview: '/src/assets/img/sabaemachinaka.png',
+    preview: sabaemachinakaPreview,
     details:
       '鯖江市と団体が提供する移定住情報や、まちなかの店舗・観光地をまとめたサイトです。レスポンシブな実装に、アニメーションを付けて賑やかさを演出しました。',
     tech: ['Astro', 'JavaScript', 'CloudFlare', 'MicroCMS', 'Sass'],
@@ -20,7 +23,7 @@ const projects = [
   {
     title: 'Astral',
     subtitle: 'イベント用情報サイト',
-    preview: '/src/assets/img/astral.png',
+    preview: astralPreview,
     details: 'ゲーム上で行うイベント用サイトです。イベント情報の掲載と、プレイヤーの成績を確認できるページがあります。現在も定期更新中です。',
     tech: ['JavaScript', 'Firebase', 'Vite', 'Vercel', 'UI/UX設計'],
     why: '小規模なWebサイトにすることと、ブラウザでのデバッグ作業が容易であることから、高速なHTML/CSSでの開発を選びました。また、Firebaseを用いてサーバーレスにすることでメンテナンスコストを削減しました。Firestoreにあるデータを、FunctionsでFirebase strageにJson形式で保存し、フロントエンドからはFunctionsでデータを呼び出すようにすることでパフォーマンスの向上と、呼び出しコストの低減をした。',
@@ -35,7 +38,7 @@ const projects = [
   {
     title: 'About of Kazuki Okubo',
     subtitle: 'ポートフォリオ',
-    preview: '/src/assets/img/portfolio.png',
+    preview: portfolioPreview,
     details: '自分の得意を伝える、ポートフォリオサイト。流しても見れるように文字情報を絞り、1ページにまとめました。',
     tech: ['React', 'Tailwind CSS', 'Vite', 'Vercel', 'UI/UX設計'],
     why: '過去のプロジェクトや得意分野など、コンポーネント化して再利用したほうが扱いやすい領域が多くなること、ボタンを押すと開く構造などState管理が必要なコンポーネントが多いことから、Reactを採用しました。また、コンポーネントのファイル1つでスタイルまで完結する、Tailwind CSSを採用し、開発効率の向上を図りました。',
