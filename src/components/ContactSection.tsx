@@ -1,5 +1,5 @@
-import { SectionHeading } from './SectionHeading'
-import ActionButton from './ActionButton'
+import { SectionHeading } from './SectionHeading';
+import ActionButton from './ActionButton';
 
 export default function ContactSection() {
   return (
@@ -10,14 +10,16 @@ export default function ContactSection() {
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
         <div className="space-y-4">
           <p className="text-sm text-slate-700">
-            お気軽にお問い合わせください。一緒に素晴らしいものを作りましょう。
+            いろいろなプラットフォームでつながりましょう！
           </p>
         </div>
         <div className="flex flex-col gap-3">
-          <ActionButton href="mailto:hello@example.com" variant="primary">メールを送る</ActionButton>
-          <ActionButton href="#">GitHub</ActionButton>
+          <ActionButton href="mailto:kazuki.okb@gmail.com" variant="primary">
+            メールを送る
+          </ActionButton>
+          <ActionButton href="https://github.com/Okubo-Kazuki" target='_blank'>GitHub</ActionButton>
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -1,0 +1,11 @@
+node_modules
+dist
+build
+public
+/.git
+.cache
+.turbo
+.next
+/.parcel-cache
+/*.log
+/*.lock

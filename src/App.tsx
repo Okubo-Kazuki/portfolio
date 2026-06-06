@@ -1,9 +1,9 @@
-import './App.css'
-import HeaderSection from './components/HeaderSection'
-import ProjectsSection from './components/ProjectsSection'
-import SkillsSection from './components/SkillsSection'
-import InterestsSection from './components/InterestsSection'
-import ContactSection from './components/ContactSection'
+import './App.css';
+import HeaderSection from './components/HeaderSection';
+import ProjectsSection from './components/ProjectsSection';
+import SkillsSection from './components/SkillsSection';
+import InterestsSection from './components/InterestsSection';
+import ContactSection from './components/ContactSection';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <ContactSection />
       </div>
     </main>
-  )
+  );
 }
 
-export default App
+export default App;

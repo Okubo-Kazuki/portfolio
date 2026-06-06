@@ -1,7 +1,7 @@
 type InterestCardProps = {
-  title: string
-  children: React.ReactNode
-}
+  title: string;
+  children: React.ReactNode;
+};
 
 export default function InterestCard({ title, children }: InterestCardProps) {
   return (
@@ -10,5 +10,5 @@ export default function InterestCard({ title, children }: InterestCardProps) {
       <div className="mb-4 mt-3 h-0.5 w-8 bg-sky-500" />
       <div>{children}</div>
     </div>
-  )
+  );
 }

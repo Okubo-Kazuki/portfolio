@@ -1,7 +1,7 @@
 type StatCardProps = {
-  label: string
-  value: string
-}
+  label: string;
+  value: string;
+};
 
 export default function StatCard({ label, value }: StatCardProps) {
   return (
@@ -9,5 +9,5 @@ export default function StatCard({ label, value }: StatCardProps) {
       <p className="text-xs uppercase tracking-[0.2em] text-slate-500">{label}</p>
       <p className="mt-2 text-lg font-bold text-slate-900">{value}</p>
     </div>
-  )
+  );
 }

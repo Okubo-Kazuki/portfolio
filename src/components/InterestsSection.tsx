@@ -1,5 +1,5 @@
-import { SectionHeading } from './SectionHeading'
-import InterestCard from './InterestCard'
+import { SectionHeading } from './SectionHeading';
+import InterestCard from './InterestCard';
 
 export default function InterestsSection() {
   return (
@@ -10,18 +10,18 @@ export default function InterestsSection() {
       <div className="grid gap-6 md:grid-cols-2">
         <InterestCard title="趣味">
           <ul className="space-y-2 text-sm text-slate-700">
-            <li>• photography</li>
-            <li>• traveling</li>
-            <li>• reading</li>
-            <li>• cooking</li>
+            <li>• 動画制作</li>
+            <li>• 一人旅</li>
+            <li>• ボイスパーカッション</li>
           </ul>
         </InterestCard>
         <InterestCard title="その他">
           <p className="text-sm leading-7 text-slate-700">
-            最新の技術トレンドに常に目を向けており、新しいフレームワークやツールの学習を心がけています。オープンソースプロジェクトへの貢献にも興味があります。
+            <br/>
+            
           </p>
         </InterestCard>
       </div>
     </section>
-  )
+  );
 }
