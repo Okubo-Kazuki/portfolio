@@ -13,7 +13,7 @@ export default function HeaderSection() {
           <div className="mt-4 h-1 w-16 bg-sky-500" />
         </div>
         <div className="grid gap-8 md:grid-cols-[minmax(240px,300px)_1fr] items-center">
-          <div className="aspect-square w-full max-w-[300px] overflow-hidden rounded-3xl border-2 border-slate-900 bg-slate-200">
+          <div className="aspect-square w-full max-w-[300px] overflow-hidden rounded-3xl border-2 border-slate-900 bg-slate-200 mx-auto lg:mx-0">
             <img
               src="/src/assets/img/face.png"
               alt="プロフィール写真"

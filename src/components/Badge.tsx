@@ -52,7 +52,7 @@ export default function Badge({ label, className = '', tooltip }: BadgeProps) {
       </button>
 
       {tooltip && open && (
-        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-64 z-10">
+        <div className="absolute z-10 w-64 left-full top-1/2 -translate-y-1/2 ml-3 lg:bottom-full lg:left-1/2 lg:top-auto lg:-translate-x-1/2 lg:translate-y-0 lg:ml-0 lg:mb-3">
           <div className="relative rounded-lg border bg-white p-3 text-sm text-slate-900 shadow-lg">
             <button
               type="button"

@@ -20,7 +20,7 @@ type ProjectCardProps = {
 export default function ProjectCard({ title, subtitle, preview, details, live, repo, tech, why, challenges, learnings, role, duration, style = '' }: ProjectCardProps) {
   const [open, setOpen] = useState(false);
 
-  const actionBase = 'rounded-2xl border-2 border-slate-900 px-8 py-3 font-bold transition';
+  const actionBase = 'rounded-2xl border-2 border-slate-900 px-6 lg:px-8 py-3 font-bold transition';
   const actionSecondary = `${actionBase} bg-white text-slate-900 hover:bg-slate-100`;
 
   const isDark = style.includes('text-white');
@@ -40,7 +40,7 @@ export default function ProjectCard({ title, subtitle, preview, details, live, r
     <>
       <article
         onClick={() => setOpen(true)}
-        className={`relative rounded-3xl border-2 border-slate-900 p-4 transition ${style} ${open ? '' : 'overflow-hidden h-96 md:h-96'} cursor-pointer`}
+        className={`relative rounded-3xl border-2 border-slate-900 p-4 transition ${style} ${open ? '' : 'lg:overflow-hidden lg:h-96'} cursor-pointer`}
       >
         <div className="flex flex-col h-full">
           <div>
