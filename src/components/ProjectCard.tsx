@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ActionButton from './ActionButton';
 
 type ProjectCardProps = {
@@ -25,6 +25,17 @@ export default function ProjectCard({ title, subtitle, preview, details, live, r
 
   const isDark = style.includes('text-white');
 
+  useEffect(() => {
+    if (!open) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
+
   return (
     <>
       <article
@@ -39,7 +50,9 @@ export default function ProjectCard({ title, subtitle, preview, details, live, r
 
           <div className="mt-3 flex-1">
             {preview && (
-              <img src={preview} alt={`${title} preview`} className="w-full h-full object-cover rounded-xl mb-4" />
+              <div className="w-full aspect-[3/2] overflow-hidden rounded-xl mb-4">
+                <img src={preview} alt={`${title} preview`} className="w-full h-full object-top object-cover" loading="lazy" />
+              </div>
             )}
           </div>
 
@@ -68,7 +81,13 @@ export default function ProjectCard({ title, subtitle, preview, details, live, r
                 </div>
 
                 <div className="mt-6">
-                  {preview && <img src={preview} alt={`${title} preview`} className="w-full h-80 object-cover rounded-md mb-6" />}
+                  {preview && (
+                    <div className="w-full flex justify-center mb-6">
+                      <div className="w-3/4 aspect-[3/2] overflow-hidden rounded-md">
+                        <img src={preview} alt={`${title} preview`} className="w-full h-full object-top object-cover" loading="lazy" />
+                      </div>
+                    </div>
+                  )}
 
                   {details && <p className={isDark ? 'text-base leading-8 text-slate-300' : 'text-base leading-8 text-slate-700'}>{details}</p>}
 
@@ -110,19 +129,29 @@ export default function ProjectCard({ title, subtitle, preview, details, live, r
                     </div>
                   )}
 
-                  {(live || repo) && (() => {
-                    const link = live ?? repo;
-                    const isLive = !!live;
+                  {(live || repo) && (
+                    <div className="mt-6">
+                      <div className="flex flex-wrap gap-3">
+                        {live && (
+                          <ActionButton href={live} variant="primary" target="_blank">
+                            Preview
+                          </ActionButton>
+                        )}
 
-                    return (
-                      <div className="mt-6">
-                        <ActionButton href={link} variant={isLive ? 'primary' : 'secondary'} target="_blank">
-                          {isLive ? 'Preview' : 'Source'}
-                        </ActionButton>
-                        <div className="mt-3 text-sm opacity-80 truncate">Link: <a href={link} target="_blank" rel="noopener noreferrer" className="underline">{link}</a></div>
+                        {repo && (
+                          <ActionButton href={repo} variant="secondary" target="_blank">
+                            Source
+                          </ActionButton>
+                        )}
                       </div>
-                    );
-                  })()}
+
+                      {(live || repo) && (
+                        <div className="mt-3 text-sm opacity-80 truncate">
+                          Link: <a href={live ?? repo} target="_blank" rel="noopener noreferrer" className="underline">{live ?? repo}</a>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

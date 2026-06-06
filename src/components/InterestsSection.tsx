@@ -18,7 +18,7 @@ export default function InterestsSection() {
         <InterestCard title="その他">
           <p className="text-sm leading-7 text-slate-700">
             1年ほど前から、有名サンドボックスゲームを用いて、プレイヤーが課題に挑戦する形式のアスレチック企画を開催しています。<br />
-            総挑戦者は120人に上る、人気企画となりました!
+            これまでに6回開催し、各回約50~60人に参加していただいています!
           </p>
         </InterestCard>
       </div>
